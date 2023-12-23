@@ -220,8 +220,9 @@ const LocationSelector = () => {
         <h2 className="result">
           You selected <span className="highlight">{selectedCity}</span>,
           <span className="fade">
-            {""}
-            {selectedState},{selectedCountry}
+            {"   "}
+            {selectedState},{"   "}
+            {selectedCountry}
           </span>
         </h2>
       )}
