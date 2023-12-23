@@ -175,6 +175,7 @@ const LocationSelector = () => {
 
   return (
     <div>
+      <h1>Select Locaton</h1>
       <select value={selectedCountry} onChange={handleCountryChange}>
         <option value="">Select Country</option>
         {countries.map((country, index) => (
