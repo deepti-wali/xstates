@@ -1,0 +1,11 @@
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.highlight {
+  font-weight: bold;
+  font-size: 24px;
+}
+.fade {
+  color: #888;
+}
