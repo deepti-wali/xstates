@@ -174,40 +174,48 @@ const LocationSelector = () => {
   };
 
   return (
-    <div>
+    <div className="city-selector">
       <h1>Select Locaton</h1>
-      <select value={selectedCountry} onChange={handleCountryChange}>
-        <option value="">Select Country</option>
-        {countries.map((country, index) => (
-          <option key={index} value={country}>
-            {country}
-          </option>
-        ))}
-      </select>
-      <select
-        value={selectedState}
-        onChange={handleStateChange}
-        disabled={stateDropdownDisabled}
-      >
-        <option value="">Select State</option>
-        {states.map((state, index) => (
-          <option key={index} value={state}>
-            {state}
-          </option>
-        ))}
-      </select>
-      <select
-        value={selectedCity}
-        onChange={(e) => setSelectedCity(e.target.value)}
-        disabled={cityDropdownDisabled}
-      >
-        <option value="">Select City</option>
-        {cities.map((city, index) => (
-          <option key={index} value={city}>
-            {city}
-          </option>
-        ))}
-      </select>
+      <div className="dropdowns">
+        <select
+          value={selectedCountry}
+          onChange={handleCountryChange}
+          className="dropdown"
+        >
+          <option value="">Select Country</option>
+          {countries.map((country, index) => (
+            <option key={index} value={country}>
+              {country}
+            </option>
+          ))}
+        </select>
+        <select
+          value={selectedState}
+          onChange={handleStateChange}
+          disabled={stateDropdownDisabled}
+          className="dropdown"
+        >
+          <option value="">Select State</option>
+          {states.map((state, index) => (
+            <option key={index} value={state}>
+              {state}
+            </option>
+          ))}
+        </select>
+        <select
+          value={selectedCity}
+          onChange={(e) => setSelectedCity(e.target.value)}
+          disabled={cityDropdownDisabled}
+          className="dropdown"
+        >
+          <option value="">Select City</option>
+          {cities.map((city, index) => (
+            <option key={index} value={city}>
+              {city}
+            </option>
+          ))}
+        </select>
+      </div>
       {selectedCity && (
         <h2 className="result">
           You selected <span className="highlight">{selectedCity}</span>,
